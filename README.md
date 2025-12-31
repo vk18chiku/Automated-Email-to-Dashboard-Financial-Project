@@ -1,65 +1,68 @@
-# 📊 Automated Email-to-Dashboard Financial Project
+# 📊 Automated Financial ETL & Dashboard Pipeline
 
-## 🔧 Project Summary
+![Automation](https://img.shields.io/badge/Workflow-Automated-green?style=for-the-badge&logo=microsoftpowerautomate) ![Python](https://img.shields.io/badge/Python-ETL-blue?style=for-the-badge&logo=python) ![Power BI](https://img.shields.io/badge/Power_BI-Analytics-yellow?style=for-the-badge&logo=powerbi)
 
-This project automates the ingestion, processing, and visualization of daily survey data received via Outlook email. By integrating Power Automate, Google Drive, a custom API, Python, and Power BI, the solution eliminates manual steps, reduces costs, and delivers real-time business insights to stakeholders.
-
----
-
-## 🛠️ Technologies Used
-
-- **Microsoft Outlook**: Receives daily emails with attachments from survey teams.
-- **Power Automate (Microsoft Flow)**: Automatically extracts attachments from emails and saves them to Google Drive.
-- **Google Drive**: Serves as the central repository for incoming data files.
-- **Custom API**: Provides an interface to serve data files from Google Drive to Python.
-- **Python**: Processes API data—combining, cleaning, and preparing it for Power BI.
-- **Power BI**: Visualizes the data, providing dashboards and analytics for decision-making.
+## 📌 Project Summary
+This project eliminates manual data entry by automating the ingestion, processing, and visualization of daily financial survey data. By integrating **Power Automate, Google Drive, custom APIs, Python, and Power BI**, the solution reduces operational costs and delivers real-time business insights to stakeholders with zero manual intervention.
 
 ---
 
-## 🔁 Automated Workflow
+## 🔁 Automated Workflow Architecture
 
 | Step | Tool | Description |
-|------|------|-------------|
-| 1 | Outlook + Power Automate | Automatically downloads and extracts attachments from incoming emails at 3 PM. |
-| 2 | Power Automate → Google Drive | Uploads all attachments to a central Google Drive folder. |
-| 3 | API | Exposes the files on Google Drive to Python through an HTTP endpoint. |
-| 4 | Python | Combines and cleans the files, calculates business metrics, and outputs a clean dataset. |
-| 5 | Power BI | Uses the cleaned dataset to generate dynamic visualizations and dashboards. |
+| :--- | :--- | :--- |
+| **1** | **Outlook + Power Automate** | Automatically extracts email attachments received at 3 PM daily. |
+| **2** | **Google Drive** | Serves as the central cloud repository for incoming raw data. |
+| **3** | **Custom API** | Acts as a bridge to serve files from Google Drive to the processing environment. |
+| **4** | **Python (Pandas)** | Performs ETL: cleans data, calculates financial metrics (LTV), and merges datasets. |
+| **5** | **Power BI** | Visualizes processed data into interactive executive dashboards. |
 
 ---
 
-## 📈 Delivered Insights
+## 🖼️ Dashboard Walkthrough
 
-The Power BI dashboard provides automated analytics on:
+### 1. Financial Performance & Risk Metrics
+This view tracks income distribution, payment delays, and credit utilization patterns to identify financial risks early.
+![Financial Performance](https://raw.githubusercontent.com/vk18chiku/Automated-Email-to-Dashboard-Financial-Project/main/Screenshot%202025-12-31%20131858.png)
 
-- Key financial metrics such as income, balance, payment delays, and credit utilization.
-- Age demographics, credit behavior, and risk patterns.
-- Customer segmentation based on inquiries and credit behavior.
-- Promotional eligibility based on Life-Time Value (LTV) calculations.
-- Ownership trends of loans and credit products across age groups.
-- Loan product popularity based on historical data.
-
----
-
-## ⏱ Automation Timeline
-
-| Time | Task |
-|------|------|
-| 3:00 PM | Emails received from survey teams across locations |
-| 3:01 PM | Power Automate extracts and uploads files to Google Drive |
-| 3:05 PM | Python script pulls data via API, cleans and transforms |
-| 3:15 PM | Power BI automatically refreshes dashboard |
-| By 8:00 PM | Insights and visuals are ready for delivery to stakeholders |
+### 2. Customer Segmentation & Credit Behavior
+Analyzes demographics and loan product popularity, including Life-Time Value (LTV) calculations for promotional eligibility.
+![Customer Analysis](https://raw.githubusercontent.com/vk18chiku/Automated-Email-to-Dashboard-Financial-Project/main/Screenshot%202025-12-31%20131909.png)
 
 ---
 
-## 📬 Contact
-
-**Uttam Kumar Mahato**  
-📧 uttammahato379@gmail.com  
+## 📈 Key Insights Delivered
+* **Financial Health:** Real-time tracking of balance vs. credit utilization.
+* **Risk Patterns:** Identified correlations between age demographics and payment delays.
+* **LTV Analysis:** Automated customer segmentation to identify "High Value" individuals for marketing promotions.
+* **Product Popularity:** Trends in loan ownership across different age groups and locations.
 
 ---
+
+## ⏱️ Automation Timeline
+* **3:00 PM:** Raw survey data received via email.
+* **3:01 PM:** Power Automate triggers, uploads files to cloud storage.
+* **3:05 PM:** Python script executes ETL (Cleaning & Transformation).
+* **3:15 PM:** Power BI dashboard refreshes.
+* **By 8:00 PM:** Fully updated insights are ready for stakeholder review.
+
+---
+
+## 🛠️ Tech Stack
+* **Automation:** Microsoft Power Automate (Flow)
+* **Processing:** Python (Pandas, NumPy, Requests)
+* **Storage:** Google Drive API
+* **Visualization:** Power BI (DAX & Power Query)
+* **Communication:** Microsoft Outlook
+
+---
+
+## 🧑‍💻 Contact
+**Uttam Kumar Mahato** 📧 [uttammahato379@gmail.com](mailto:uttammahato379@gmail.com)  
+📂 [GitHub Profile](https://github.com/vk18chiku)
+
+---
+*If you find this project helpful for your automation needs, feel free to ⭐ the repository!*
 
 
 
